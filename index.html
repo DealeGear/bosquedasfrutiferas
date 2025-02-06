@@ -1,58 +1,73 @@
-export default function Home() {
-  return (
-    <div className="min-h-screen bg-green-100 text-gray-900">
-      {/* Header */}
-      <header className="bg-green-700 text-white py-6 text-center text-2xl font-bold">
-        Bosque das Frutíferas
-      </header>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bosque das Frutíferas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ea;
+            text-align: center;
+        }
+        header, footer {
+            background-color: #2d6a4f;
+            color: white;
+            padding: 20px;
+            font-size: 1.5em;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .content-box {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .image-placeholder {
+            width: 100%;
+            height: 250px;
+            background-color: #ccc;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #555;
+            font-size: 1.2em;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>Bosque das Frutíferas</header>
+    
+    <section>
+        <h1>Natureza, Aprendizado e Lazer</h1>
+        <p>Um refúgio verde na cidade, repleto de árvores frutíferas, onde crianças e adultos podem explorar, aprender e se conectar com a natureza.</p>
+        <div class="image-placeholder">Imagem destaque aqui</div>
+    </section>
 
-      {/* Hero Section */}
-      <section className="text-center py-10 px-4">
-        <h1 className="text-3xl font-semibold mb-4">Natureza, Aprendizado e Lazer</h1>
-        <p className="text-lg max-w-2xl mx-auto">
-          Um refúgio verde na cidade, repleto de árvores frutíferas, onde crianças e adultos
-          podem explorar, aprender e se conectar com a natureza.
-        </p>
-        <div className="mt-6 bg-gray-300 w-full h-64 flex items-center justify-center">
-          <span className="text-gray-500">Imagem destaque aqui</span>
-        </div>
-      </section>
+    <section class="content-box">
+        <h2>Sobre o Bosque</h2>
+        <p>O Bosque das Frutíferas é um espaço único na periferia, aberto de terça a domingo, oferecendo lazer e aprendizado com diversas espécies de árvores frutíferas.</p>
+        <div class="image-placeholder">Imagem do bosque aqui</div>
+    </section>
 
-      {/* Sobre o Bosque */}
-      <section className="bg-white py-10 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold mb-4">Sobre o Bosque</h2>
-          <p className="text-lg mb-6">
-            O Bosque das Frutíferas é um espaço único na periferia, aberto de terça a domingo,
-            oferecendo lazer e aprendizado com diversas espécies de árvores frutíferas.
-          </p>
-          <div className="bg-gray-300 w-full h-64 flex items-center justify-center">
-            <span className="text-gray-500">Imagem do bosque aqui</span>
-          </div>
-        </div>
-      </section>
+    <section class="content-box">
+        <h2>Onde Estamos</h2>
+        <p>Visite-nos e descubra um pedaço da natureza perto de você.</p>
+        <div class="image-placeholder">Mapa aqui</div>
+    </section>
 
-      {/* Localização */}
-      <section className="py-10 px-4 bg-green-200">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-2xl font-semibold mb-4">Onde Estamos</h2>
-          <p className="text-lg mb-6">Visite-nos e descubra um pedaço da natureza perto de você.</p>
-          <div className="bg-gray-300 w-full h-64 flex items-center justify-center">
-            <span className="text-gray-500">Mapa aqui</span>
-          </div>
-        </div>
-      </section>
-
-      {/* Contato */}
-      <section className="py-10 px-4 bg-white text-center">
-        <h2 className="text-2xl font-semibold mb-4">Contato</h2>
-        <p className="text-lg">Para mais informações, entre em contato pelo e-mail: contato@bosque.com</p>
-      </section>
-
-      {/* Footer */}
-      <footer className="bg-green-700 text-white py-4 text-center">
-        &copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.
-      </footer>
-    </div>
-  );
-}
+    <section class="content-box">
+        <h2>Contato</h2>
+        <p>Para mais informações, entre em contato pelo e-mail: contato@bosque.com</p>
+    </section>
+    
+    <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
+</body>
+</html>
