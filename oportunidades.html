@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oportunidades - Bosque das Frutíferas</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    /* Estilos básicos */
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ea;
+      color: #333;
+      text-align: center;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 15px;
+      font-size: 1.4em;
+    }
+    .nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .nav a {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .nav a:hover {
+      background-color: #1b4d35;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      text-align: left;
+    }
+    h1, h2 {
+      color: #2d6a4f;
+    }
+    form {
+      text-align: left;
+      margin-bottom: 40px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    input[type="submit"]:hover {
+      background-color: #1b4d35;
+    }
+    .response {
+      display: none;
+      padding: 15px;
+      background-color: #e7f3e7;
+      border: 1px solid #2d6a4f;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+    .job-vacancy {
+      margin-bottom: 30px;
+    }
+    .job-vacancy h3 {
+      margin: 0;
+      color: #2d6a4f;
+    }
+    .job-vacancy ul {
+      list-style: disc;
+      margin-left: 20px;
+    }
+    @media (max-width: 768px) {
+      header, footer {
+        font-size: 1.2em;
+        padding: 12px;
+      }
+      .container {
+        padding: 20px;
+        margin: 10px;
+      }
+      .nav a {
+        padding: 8px 15px;
+        margin: 0 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Oportunidades - Bosque das Frutíferas</header>
+  
+  <div class="nav">
+    <a href="index.html">Página Inicial</a>
+    <a href="agendar.html">Agendar Visita</a>
+    <a href="doacao.html">Fazer Doação</a>
+    <a href="oportunidades.html">Oportunidades</a>
+    <a href="sobre.html">Sobre</a>
+  </div>
+  
+  <div class="container">
+    <h1>Formulário para Candidatura</h1>
+    <p>Preencha os dados abaixo para se candidatar às vagas disponíveis:</p>
+    <form id="jobForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="vaga">Vaga de Interesse:</label>
+      <select id="vaga" name="vaga" required>
+        <option value="">Selecione a vaga</option>
+        <option value="webdesign">Webdesign</option>
+        <option value="porteiro">Porteiro</option>
+        <option value="limpeza">Profissional de Limpeza</option>
+        <option value="botanica">Botânica</option>
+        <option value="manutencao">Profissional de Manutenção Predial</option>
+        <option value="aprendiz">Aprendiz</option>
+      </select>
+      
+      <label for="observacoes">Observações (opcional):</label>
+      <textarea id="observacoes" name="observacoes" rows="4" placeholder="Insira aqui qualquer informação adicional..."></textarea>
+      
+      <label for="diaHorario">Dia e Horário Preferido para Contato:</label>
+      <input type="text" id="diaHorario" name="diaHorario" placeholder="Ex: Terça-feira, 10:00" required>
+      
+      <input type="submit" value="Enviar">
+    </form>
+    
+    <div id="response" class="response">
+      <p><strong>Mensagem enviada, aguarde nosso contato.</strong></p>
+      <p>Agradecemos seu interesse em se candidatar às vagas do Bosque das Frutíferas.</p>
+    </div>
+    
+    <h2>Vagas Disponíveis</h2>
+    
+    <div class="job-vacancy">
+      <h3>Webdesign</h3>
+      <ul>
+        <li>Conhecimento em HTML, CSS e JavaScript</li>
+        <li>Experiência em design gráfico e criação de layouts responsivos</li>
+        <li>Domínio de ferramentas de design (Photoshop, Illustrator)</li>
+      </ul>
+    </div>
+    
+    <div class="job-vacancy">
+      <h3>Porteiro</h3>
+      <ul>
+        <li>Experiência em controle de acesso e segurança</li>
+        <li>Boa comunicação e postura profissional</li>
+        <li>Conhecimento em atendimento ao público</li>
+      </ul>
+    </div>
+    
+    <div class="job-vacancy">
+      <h3>Profissional de Limpeza</h3>
+      <ul>
+        <li>Experiência em limpeza e conservação de ambientes</li>
+        <li>Conhecimento em produtos e técnicas de limpeza</li>
+        <li>Capacidade de trabalhar de forma organizada e eficiente</li>
+      </ul>
+    </div>
+    
+    <div class="job-vacancy">
+      <h3>Botânica</h3>
+      <ul>
+        <li>Formação em Biologia, Botânica ou áreas relacionadas</li>
+        <li>Conhecimento em flora e manejo sustentável</li>
+        <li>Experiência em projetos ambientais</li>
+      </ul>
+    </div>
+    
+    <div class="job-vacancy">
+      <h3>Profissional de Manutenção Predial</h3>
+      <ul>
+        <li>Experiência em manutenção de edificações</li>
+        <li>Conhecimentos básicos de elétrica, hidráulica e pintura</li>
+        <li>Capacidade de resolver problemas de forma prática e autônoma</li>
+      </ul>
+    </div>
+    
+    <div class="job-vacancy">
+      <h3>Aprendiz</h3>
+      <ul>
+        <li>Vontade de aprender e se desenvolver</li>
+        <li>Ensino Fundamental ou Médio completo</li>
+        <li>Disponibilidade para treinamento e desenvolvimento</li>
+      </ul>
+    </div>
+    
+  </div>
+  
+  <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
+  
+  <script>
+    document.getElementById('jobForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Oculta o formulário
+      this.style.display = 'none';
+      // Exibe a mensagem de resposta
+      document.getElementById('response').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
