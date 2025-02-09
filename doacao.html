@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fazer Doação - Bosque das Frutíferas</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ea;
+      color: #333;
+      line-height: 1.6;
+    }
+    header, footer {
+      background-color: #2d6a4f;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .nav a {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .nav a:hover {
+      background-color: #1b4d35;
+    }
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: white;
+      padding: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    form {
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      background-color: #2d6a4f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    input[type="submit"]:hover {
+      background-color: #1b4d35;
+    }
+    #response {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #e7f3e7;
+      border: 1px solid #2d6a4f;
+      border-radius: 5px;
+    }
+    @media (max-width: 768px) {
+      header, footer {
+        padding: 15px;
+        font-size: 1.2em;
+      }
+      .container {
+        padding: 20px;
+        margin: 10px;
+      }
+      .nav a {
+        padding: 8px 15px;
+        margin: 0 3px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Fazer Doação - Bosque das Frutíferas</header>
+  
+  <div class="nav">
+    <a href="index.html">Página Inicial</a>
+    <a href="agendar.html">Agendar Visita</a>
+    <a href="doacao.html">Fazer Doação</a>
+    <a href="oportunidades.html">Oportunidades</a>
+    <a href="sobre.html">Sobre o Projeto</a>
+  </div>
+  
+  <div class="container">
+    <h1>Fazer Doação</h1>
+    <p>Preencha o formulário abaixo para fazer sua doação e apoiar essa importante iniciativa:</p>
+    <form id="donationForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+      
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" required>
+      
+      <label for="email">Email de Conta:</label>
+      <input type="email" id="email" name="email" required>
+      
+      <label for="diaHorario">Dia e Horário Preferido para Contato:</label>
+      <input type="text" id="diaHorario" name="diaHorario" placeholder="Ex: Segunda-feira, 14:00" required>
+      
+      <label for="infoAdicional">Outras Informações (opcional):</label>
+      <textarea id="infoAdicional" name="infoAdicional" rows="4" placeholder="Escreva aqui se necessário..."></textarea>
+      
+      <input type="submit" value="Enviar">
+    </form>
+    
+    <div id="response">
+      <p><strong>Agradecemos seu contato e interesse em manter essa importante iniciativa que é o Bosque das Frutíferas.</strong></p>
+    </div>
+  </div>
+  
+  <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
+  
+  <script>
+    document.getElementById('donationForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Oculta o formulário
+      this.style.display = 'none';
+      // Exibe a mensagem de resposta
+      document.getElementById('response').style.display = 'block';
+    });
+  </script>
+</body>
+</html>
