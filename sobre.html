@@ -24,102 +24,153 @@
     }
     header {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      position: relative;
     }
     footer {
       margin-top: 40px;
-    }
-    .menu-icon {
-      display: none;
-      cursor: pointer;
-      position: absolute;
-      right: 20px;
-      top: 20px;
-    }
-    .menu-icon div {
-      width: 30px;
-      height: 4px;
-      background-color: white;
-      margin: 5px 0;
     }
     .nav {
       text-align: center;
       margin: 20px 0;
     }
-    .nav-links {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .nav-links a {
+    .nav a {
       background-color: #2d6a4f;
       color: white;
       padding: 10px 20px;
-      margin: 5px;
+      margin: 0 5px;
       text-decoration: none;
       border-radius: 5px;
       transition: background-color 0.3s;
     }
-    .nav-links a:hover {
+    .nav a:hover {
       background-color: #1b4d35;
     }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1, h2 {
+      color: #2d6a4f;
+      margin-top: 0;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 20px;
+    }
+    h2 {
+      font-size: 1.8em;
+      margin-bottom: 15px;
+      border-bottom: 2px solid #2d6a4f;
+      padding-bottom: 5px;
+    }
+    p {
+      margin-bottom: 20px;
+      text-align: justify;
+    }
+    ul {
+      margin-bottom: 20px;
+      padding-left: 20px;
+    }
+    ul li {
+      margin-bottom: 10px;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid #ddd;
+      margin: 30px 0;
+    }
     @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        background-color: #2d6a4f;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        text-align: center;
-      }
-      .nav-links a {
-        display: block;
+      header, footer {
+        font-size: 1.2em;
         padding: 15px;
-        width: 100%;
       }
-      .nav-links.active {
-        display: flex;
+      .container {
+        padding: 20px;
+        margin: 10px;
+      }
+      .nav a {
+        padding: 8px 15px;
+        margin: 0 3px;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    Sobre o Bosque das Frutíferas
-    <div class="menu-icon" onclick="toggleMenu()">
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </header>
+  <header>Sobre o Bosque das Frutíferas</header>
 
-  <nav class="nav">
-    <div class="nav-links" id="navLinks">
-      <a href="index.html">Página Inicial</a>
-      <a href="agendar.html">Agendar Visita</a>
-      <a href="doacao.html">Fazer Doação</a>
-      <a href="oportunidades.html">Oportunidades</a>
-      <a href="sobre.html">Sobre o Projeto</a>
-    </div>
-  </nav>
+  <div class="nav">
+    <a href="index.html">Página Inicial</a>
+    <a href="agendar.html">Agendar Visita</a>
+    <a href="doacao.html">Fazer Doação</a>
+    <a href="oportunidades.html">Oportunidades</a>
+    <a href="sobre.html">Sobre o Projeto</a>
+  </div>
 
   <div class="container">
     <h1>Bosque das Frutíferas – Um Refúgio Verde na Cidade</h1>
-    <p>O <strong>Bosque das Frutíferas</strong> é um espaço ecológico inovador...</p>
+    <p>O <strong>Bosque das Frutíferas</strong> é um espaço ecológico inovador, criado para oferecer lazer, educação ambiental e contato direto com a natureza em uma região periférica da cidade. O bosque é um exemplo de integração entre urbanismo sustentável, conservação ambiental e melhoria da qualidade de vida das pessoas.</p>
+    
+    <hr>
+    <h2>Localização e Criação do Bosque</h2>
+    <p>O bosque foi implantado em uma <strong>área anteriormente ocupada por moradias informais</strong>, desapropriada pelo poder público com um planejamento responsável. As famílias que viviam nessa região foram <strong>transferidas voluntariamente para novas habitações</strong>, projetadas para oferecer infraestrutura de qualidade, segurança e conforto, mantendo o perfil arquitetônico e a metragem compatível com suas antigas residências.</p>
+    <p>A área, antes degradada pela ocupação desordenada e carência de espaços verdes, foi restaurada e transformada em um <strong>grande bosque urbano de árvores frutíferas</strong>, promovendo a recuperação ambiental e oferecendo benefícios diretos à comunidade.</p>
+    
+    <hr>
+    <h2>Estrutura e Funcionamento</h2>
+    <p>O Bosque das Frutíferas funciona de <strong>terça a domingo, das 8h às 18h</strong>, oferecendo aos visitantes um espaço agradável para caminhadas, atividades recreativas e aprendizado sobre a biodiversidade.</p>
+    <ul>
+      <li><strong>Árvores Frutíferas Diversificadas</strong>: O local abriga uma grande variedade de árvores frutíferas, incluindo <strong>mangueiras, jabuticabeiras, laranjeiras, bananeiras, abacateiros e outras espécies nativas e exóticas</strong>, permitindo que os visitantes conheçam e experimentem diferentes frutas ao longo do ano.</li>
+      <li><strong>Trilhas Educativas</strong>: Caminhos sinalizados percorrem o bosque, proporcionando uma experiência imersiva na natureza, com placas informativas sobre as espécies plantadas e suas características.</li>
+      <li><strong>Espaços de Convivência</strong>: O bosque conta com áreas de descanso, bancos à sombra das árvores, espaços para piqueniques e um pequeno café administrado por empreendedores locais.</li>
+      <li><strong>Atividades e Oficinas</strong>: Regularmente, o bosque promove atividades educativas para crianças e adultos, incluindo oficinas de plantio, compostagem e conscientização ambiental.</li>
+    </ul>
+    
+    <hr>
+    <h2>Equipe e Profissionais Especializados</h2>
+    <ul>
+      <li><strong>Botânicos e Biólogos</strong> – Responsáveis pelo planejamento e manutenção das espécies vegetais, garantindo um ecossistema equilibrado.</li>
+      <li><strong>Agrônomos</strong> – Acompanham o cultivo das árvores e orientam práticas de manejo sustentável.</li>
+      <li><strong>Educadores Ambientais</strong> – Conduzem visitas guiadas e oficinas educativas para escolas e grupos comunitários.</li>
+      <li><strong>Jardineiros e Zeladores</strong> – Cuidam da limpeza, poda e manutenção das áreas verdes.</li>
+      <li><strong>Segurança e Administração</strong> – Equipe dedicada a garantir um ambiente seguro e bem organizado para todos os visitantes.</li>
+    </ul>
+    
+    <hr>
+    <h2>Financiamento e Sustentabilidade Financeira</h2>
+    <ul>
+      <li><strong>Ingresso Simbólico</strong> – Os visitantes pagam uma pequena taxa de entrada, revertida para a manutenção do espaço.</li>
+      <li><strong>Parcerias Públicas e Privadas</strong> – Empresas e órgãos governamentais apoiam o projeto, garantindo sua continuidade e expansão.</li>
+      <li><strong>Doações e Voluntariado</strong> – Organizações ambientais e cidadãos podem contribuir financeiramente ou voluntariar-se para ajudar na conservação do bosque.</li>
+      <li><strong>Eventos e Oficinas</strong> – Cursos, workshops e eventos especiais geram receita adicional para o bosque.</li>
+    </ul>
+    
+    <hr>
+    <h2>Impactos Ambientais Positivos</h2>
+    <ul>
+      <li><strong>Recuperação da Vegetação</strong> – O reflorestamento da área aumentou a biodiversidade local.</li>
+      <li><strong>Redução da Poluição</strong> – A presença das árvores melhora a qualidade do ar e reduz a temperatura ambiente.</li>
+      <li><strong>Controle de Erosão e Enchentes</strong> – O solo protegido pelas raízes das árvores ajuda a evitar erosões e facilita a absorção da água da chuva.</li>
+      <li><strong>Aumento da Fauna Local</strong> – Atração de pássaros, insetos polinizadores e pequenos mamíferos, fortalecendo o ecossistema.</li>
+    </ul>
+    
+    <hr>
+    <h2>Impactos na Qualidade de Vida da População</h2>
+    <ul>
+      <li><strong>Mais Lazer e Bem-Estar</strong> – O bosque oferece um ambiente tranquilo para relaxamento e atividades ao ar livre.</li>
+      <li><strong>Educação e Conscientização</strong> – Escolas locais utilizam o espaço para aulas práticas sobre meio ambiente.</li>
+      <li><strong>Valorização Imobiliária</strong> – As novas moradias e a proximidade com o bosque elevaram a qualidade de vida da região.</li>
+      <li><strong>Saúde Pública</strong> – A convivência com áreas verdes reduz o estresse, melhora a saúde mental e incentiva práticas saudáveis.</li>
+    </ul>
+    
+    <hr>
+    <h2>Um Exemplo de Sustentabilidade Urbana</h2>
+    <p>O <strong>Bosque das Frutíferas</strong> é um modelo de revitalização urbana sustentável, mostrando como é possível transformar espaços degradados em áreas produtivas e benéficas para toda a população. Ele une <strong>preservação ambiental, educação e qualidade de vida</strong>, sendo uma referência para futuras iniciativas ecológicas em cidades de todo o país.</p>
+    <p>🌳💚 <strong>Venha conhecer e se conectar com a natureza!</strong></p>
   </div>
 
   <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
-
-  <script>
-    function toggleMenu() {
-      const navLinks = document.getElementById('navLinks');
-      navLinks.classList.toggle('active');
-    }
-  </script>
 </body>
 </html>
