@@ -1,102 +1,125 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bosque das Frutíferas</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f8ea;
-            text-align: center;
-        }
-        header, footer {
-            background-color: #2d6a4f;
-            color: white;
-            padding: 15px;
-            font-size: 1.4em;
-        }
-        section {
-            padding: 30px 15px;
-        }
-        .content-box {
-            background-color: white;
-            padding: 15px;
-            margin: 15px auto;
-            max-width: 600px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-        .image-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-            overflow: hidden;
-            border-radius: 8px;
-        }
-        .image-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        @media (max-width: 768px) {
-            header, footer {
-                font-size: 1.2em;
-                padding: 12px;
-            }
-            .content-box {
-                padding: 12px;
-                margin: 10px;
-            }
-        }
-        @media (max-width: 480px) {
-            header, footer {
-                font-size: 1em;
-                padding: 10px;
-            }
-            .content-box {
-                padding: 10px;
-                margin: 5px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bosque das Frutíferas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f8ea;
+      text-align: center;
+    }
+    header, footer {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 15px;
+      font-size: 1.4em;
+    }
+    .nav {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .nav a {
+      background-color: #2d6a4f;
+      color: white;
+      padding: 10px 20px;
+      margin: 0 5px;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    .nav a:hover {
+      background-color: #1b4d35;
+    }
+    section {
+      padding: 30px 15px;
+    }
+    .content-box {
+      background-color: white;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 600px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    .image-container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .image-container img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      header, footer {
+        font-size: 1.2em;
+        padding: 12px;
+      }
+      .content-box {
+        padding: 12px;
+        margin: 10px;
+      }
+    }
+    @media (max-width: 480px) {
+      header, footer {
+        font-size: 1em;
+        padding: 10px;
+      }
+      .content-box {
+        padding: 10px;
+        margin: 5px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>Bosque das Frutíferas</header>
-    
-    <section>
-        <h1>Natureza, Aprendizado e Lazer</h1>
-        <p>Um refúgio verde na cidade, repleto de árvores frutíferas, onde crianças e adultos podem explorar, aprender e se conectar com a natureza.</p>
-        <div class="image-container">
-            <img src="img/bosque2.jpg" alt="Vista do Bosque das Frutíferas">
-        </div>
-    </section>
-
-    <section class="content-box">
-        <h2>Sobre o Bosque</h2>
-        <p>O Bosque das Frutíferas é um espaço único na periferia, aberto de terça a domingo, oferecendo lazer e aprendizado com diversas espécies de árvores frutíferas.</p>
-        <div class="image-container">
-            <img src="img/bosque3.jpg" alt="Árvores frutíferas no bosque">
-        </div>
-    </section>
-
-    <section class="content-box">
-        <h2>Onde Estamos</h2>
-        <p>Visite-nos e descubra um pedaço da natureza perto de você.</p>
-        <div class="image-container">
-            <img src="img/bosque4.jpg" alt="Mapa do Bosque das Frutíferas">
-        </div>
-    </section>
-
-    <section class="content-box">
-        <h2>Contato</h2>
-        <div class="nav">
-        <a href="sobre.html">Sobre o Projeto</a>
+  <header>Bosque das Frutíferas</header>
+  
+  <div class="nav">
+    <a href="index.html">Página Inicial</a>
+    <a href="agendar.html">Agendar Visita</a>
+    <a href="doacao.html">Fazer Doação</a>
+    <a href="oportunidades.html">Oportunidades</a>
+  </div>
+  
+  <section>
+    <h1>Natureza, Aprendizado e Lazer</h1>
+    <p>Um refúgio verde na cidade, repleto de árvores frutíferas, onde crianças e adultos podem explorar, aprender e se conectar com a natureza.</p>
+    <div class="image-container">
+      <img src="img/bosque2.jpg" alt="Vista do Bosque das Frutíferas">
     </div>
-    </section>
-    
-    <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
+  </section>
+
+  <section class="content-box">
+    <h2>Sobre o Bosque</h2>
+    <p>O Bosque das Frutíferas é um espaço único na periferia, aberto de terça a domingo, oferecendo lazer e aprendizado com diversas espécies de árvores frutíferas.</p>
+    <div class="image-container">
+      <img src="img/bosque3.jpg" alt="Árvores frutíferas no bosque">
+    </div>
+  </section>
+
+  <section class="content-box">
+    <h2>Onde Estamos</h2>
+    <p>Visite-nos e descubra um pedaço da natureza perto de você.</p>
+    <div class="image-container">
+      <img src="img/bosque4.jpg" alt="Mapa do Bosque das Frutíferas">
+    </div>
+  </section>
+
+  <section class="content-box">
+    <h2>Contato</h2>
+    <div class="nav">
+      <a href="sobre.html">Sobre o Projeto</a>
+    </div>
+  </section>
+  
+  <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
 </body>
 </html>
