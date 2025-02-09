@@ -20,27 +20,58 @@
     }
     /* Faixa vermelha de alerta */
     .alert {
-      background-color: #e53935; /* tom de vermelho */
+      background-color: #e53935;
       color: white;
       padding: 10px 20px;
       font-size: 1em;
       text-align: center;
     }
-    .nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .nav a {
+    /* Estilos do menu de navegação */
+    nav {
       background-color: #2d6a4f;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 5px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
+      overflow: hidden;
+      position: relative;
     }
-    .nav a:hover {
+    /* Ícone do menu hamburger */
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      padding: 14px 20px;
+    }
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+    /* Links do menu */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      text-align: left;
+    }
+    .nav-links a {
+      display: block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .nav-links a:hover {
       background-color: #1b4d35;
+    }
+    /* Exibir links em telas maiores */
+    @media (min-width: 600px) {
+      .menu-icon {
+        display: none;
+      }
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .nav-links a {
+        display: inline-block;
+      }
     }
     section {
       padding: 30px 15px;
@@ -95,13 +126,21 @@
     Este é um projeto conceitual e qualquer informação inserida nos formulários não será salva e nem mesmo enviada para os responsáveis pelo projeto.
   </div>
   
-  <div class="nav">
-    <a href="index.html">Página Inicial</a>
-    <a href="agendar.html">Agendar Visita</a>
-    <a href="doacao.html">Fazer Doação</a>
-    <a href="oportunidades.html">Oportunidades</a>
-    <a href="sobre.html">Sobre o Projeto</a>
-  </div>
+  <!-- Menu de navegação com hamburger -->
+  <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Página Inicial</a>
+      <a href="agendar.html">Agendar Visita</a>
+      <a href="doacao.html">Fazer Doação</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="sobre.html">Sobre</a>
+    </div>
+  </nav>
   
   <section>
     <h1>Natureza, Aprendizado e Lazer</h1>
@@ -127,7 +166,36 @@
     </div>
   </section>
 
+  <section class="content-box">
+    <h2>Contato</h2>
+    <div class="nav">
+      <a href="sobre.html">Sobre o Projeto</a>
+    </div>
+  </section>
   
   <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
+  
+  <script>
+    function toggleMenu() {
+      var navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+      // Alterna entre exibir e ocultar os links
+      if (navLinks.classList.contains('active')) {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+      } else {
+        navLinks.style.display = 'none';
+      }
+    }
+    // Exibir os links automaticamente em telas maiores
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 600) {
+        document.getElementById('navLinks').style.display = 'flex';
+        document.getElementById('navLinks').style.flexDirection = 'row';
+      } else {
+        document.getElementById('navLinks').style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
