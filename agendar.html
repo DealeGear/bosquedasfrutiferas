@@ -21,22 +21,54 @@
       text-align: center;
       padding: 20px;
     }
-    .nav {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .nav a {
-      background-color: #2d6a4f;
-      color: white;
-      padding: 10px 20px;
-      margin: 0 5px;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s;
-    }
-    .nav a:hover {
-      background-color: #1b4d35;
-    }
+    /* Estilos do menu de navegação */
+nav {
+  background-color: #2d6a4f;
+  overflow: hidden;
+  position: relative;
+}
+/* Ícone do menu hamburger */
+.menu-icon {
+  display: block;
+  cursor: pointer;
+  padding: 14px 20px;
+}
+.menu-icon div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px 0;
+}
+/* Links do menu */
+.nav-links {
+  display: none;
+  flex-direction: column;
+  text-align: left;
+}
+.nav-links a {
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+.nav-links a:hover {
+  background-color: #1b4d35;
+}
+/* Exibir links em telas maiores */
+@media (min-width: 600px) {
+  .menu-icon {
+    display: none;
+  }
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .nav-links a {
+    display: inline-block;
+  }
+}
+
     .container {
       max-width: 800px;
       margin: 20px auto;
@@ -99,13 +131,22 @@
 <body>
   <header>Agendar Visita - Bosque das Frutíferas</header>
   
-  <div class="nav">
+  <!-- Menu de navegação com hamburger -->
+<nav>
+  <div class="menu-icon" onclick="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Página Inicial</a>
     <a href="agendar.html">Agendar Visita</a>
     <a href="doacao.html">Fazer Doação</a>
     <a href="oportunidades.html">Oportunidades</a>
-    <a href="sobre.html">Sobre o Projeto</a>
+    <a href="sobre.html">Sobre</a>
   </div>
+</nav>
+
   
   <div class="container">
     <h1>Agendamento de Visita</h1>
@@ -156,5 +197,28 @@
       document.getElementById('response').style.display = 'block';
     });
   </script>
+  <script>
+  function toggleMenu() {
+    var navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+    // Alterna entre exibir e ocultar os links
+    if (navLinks.classList.contains('active')) {
+      navLinks.style.display = 'flex';
+      navLinks.style.flexDirection = 'column';
+    } else {
+      navLinks.style.display = 'none';
+    }
+  }
+  // Exibir os links automaticamente em telas maiores
+  window.addEventListener('resize', function() {
+    if (window.innerWidth >= 600) {
+      document.getElementById('navLinks').style.display = 'flex';
+      document.getElementById('navLinks').style.flexDirection = 'row';
+    } else {
+      document.getElementById('navLinks').style.display = 'none';
+    }
+  });
+</script>
+
 </body>
 </html>
