@@ -1,6 +1,6 @@
 Bosque das Frutíferas
 
-Atenção, este é um projeto conceitual. Ele serve para explorar e definir os princípios, objetivos e viabilidade de uma ideia, neste caso, um bosque composto por árvores frutíferas de diversas espécies, instalado em áreas carentes de opções de entretenimento conectadas ao meio ambiente e à sustentabilidade.
+Atenção, este é um projeto conceitual. Ele serve para explorar e definir os princípios, objetivos e viabilidade de uma ideia, neste caso, um bosque composto por árvores frutíferas de diversas espécies, instalado em áreas carentes de opções de entretenimento que estejam conectadas ao meio ambiente e aos conceitos de sustentabilidade.
 
 Uma Solução Sustentável para Cidades do Futuro
 
