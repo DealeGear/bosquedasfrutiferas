@@ -1,5 +1,7 @@
 Bosque das Frutíferas
 
+Atenção, este é um projeto conceitual. Ele serve para explorar e definir os princípios, objetivos e viabilidade de uma ideia, neste caso, um bosque composto por árvores frutíferas de diversas espécies, instalado em áreas carentes de opções de entretenimento conectadas ao meio ambiente e à sustentabilidade.
+
 Uma Solução Sustentável para Cidades do Futuro
 
 O Bosque das Frutíferas é um projeto inovador de revitalização urbana, que alia sustentabilidade, inclusão social e educação ambiental. Nosso objetivo é transformar áreas subutilizadas ou degradadas em oásis ecológicos dentro das cidades, promovendo benefícios ambientais, sociais e econômicos.
