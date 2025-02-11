@@ -20,7 +20,7 @@
       color: white;
       text-align: center;
       padding: 15px;
-font-size: 1.4em;
+      font-size: 1.4em;
     }
     header {
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -29,53 +29,55 @@ font-size: 1.4em;
       margin-top: 40px;
     }
     /* Estilos do menu de navegação */
-nav {
-  background-color: #2d6a4f;
-  overflow: hidden;
-  position: relative;
-}
-/* Ícone do menu hamburger */
-.menu-icon {
-  display: block;
-  cursor: pointer;
-  padding: 14px 20px;
-}
-.menu-icon div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px 0;
-}
-/* Links do menu */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  text-align: left;
-}
-.nav-links a {
-  display: block;
-  color: white;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-.nav-links a:hover {
-  background-color: #1b4d35;
-}
-/* Exibir links em telas maiores */
-@media (min-width: 600px) {
-  .menu-icon {
-    display: none;
-  }
-  .nav-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  }
-  .nav-links a {
-    display: inline-block;
-  }
-}
-
+    nav {
+      background-color: #2d6a4f;
+      overflow: hidden;
+      position: relative;
+    }
+    /* Ícone do menu hamburger */
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+      padding: 14px 20px;
+    }
+    .menu-icon div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 5px 0;
+    }
+    /* Links do menu */
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      text-align: left;
+    }
+    .nav-links a {
+      display: block;
+      color: white;
+      padding: 14px 20px;
+      text-decoration: none;
+    }
+    .nav-links a:hover {
+      background-color: #1b4d35;
+    }
+    /* Exibir links em telas maiores */
+    @media (min-width: 600px) {
+      .menu-icon {
+        display: none;
+      }
+      .nav-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      .nav-links a {
+        display: inline-block;
+      }
+    }
+    section {
+      padding: 30px 15px;
+    }
     .container {
       max-width: 900px;
       margin: 20px auto;
@@ -83,6 +85,7 @@ nav {
       padding: 40px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
+      text-align: left;
     }
     h1, h2 {
       color: #2d6a4f;
@@ -97,6 +100,9 @@ nav {
       margin-bottom: 15px;
       border-bottom: 2px solid #2d6a4f;
       padding-bottom: 5px;
+    }
+    h3, h4 {
+      color: #2d6a4f;
     }
     p {
       margin-bottom: 20px;
@@ -123,12 +129,22 @@ nav {
         padding: 20px;
         margin: 10px;
       }
-      .nav a {
+      .nav-links a {
         padding: 8px 15px;
         margin: 0 3px;
       }
     }
-      /* Faixa vermelha de alerta */
+    @media (max-width: 480px) {
+      header, footer {
+        font-size: 1em;
+        padding: 10px;
+      }
+      .container {
+        padding: 10px;
+        margin: 5px;
+      }
+    }
+    /* Faixa vermelha de alerta */
     .alert {
       background-color: #e53935;
       color: white;
@@ -136,7 +152,6 @@ nav {
       font-size: 1em;
       text-align: center;
     }
-    
   </style>
 </head>
 <body>
@@ -145,24 +160,22 @@ nav {
   <div class="alert">
     Este é um projeto conceitual e qualquer informação inserida nos formulários não será salva e nem mesmo enviada para os responsáveis pelo projeto.
   </div>
-
- <!-- Menu de navegação com hamburger -->
-<nav>
-  <div class="menu-icon" onclick="toggleMenu()">
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Página Inicial</a>
-    <a href="agendar.html">Agendar Visita</a>
-    <a href="doacao.html">Fazer Doação</a>
-    <a href="oportunidades.html">Oportunidades</a>
-    <a href="sobre.html">Sobre o Projeto</a>
-    <a href="https://dealegear.wixsite.com/meusite" target="_blank">Voltar para DealeGear</a>
-  </div>
-</nav>
-
+  <!-- Menu de navegação com hamburger -->
+  <nav>
+    <div class="menu-icon" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Página Inicial</a>
+      <a href="agendar.html">Agendar Visita</a>
+      <a href="doacao.html">Fazer Doação</a>
+      <a href="oportunidades.html">Oportunidades</a>
+      <a href="sobre.html">Sobre o Projeto</a>
+      <a href="https://dealegear.wixsite.com/meusite" target="_blank">Voltar para DealeGear</a>
+    </div>
+  </nav>
   <div class="container">
     <h1>Bosque das Frutíferas – Um Refúgio Verde na Cidade</h1>
     <p>O <strong>Bosque das Frutíferas</strong> é um espaço ecológico inovador, criado para oferecer lazer, educação ambiental e contato direto com a natureza em uma região periférica da cidade. O bosque é um exemplo de integração entre urbanismo sustentável, conservação ambiental e melhoria da qualidade de vida das pessoas.</p>
@@ -223,31 +236,123 @@ nav {
     <h2>Um Exemplo de Sustentabilidade Urbana</h2>
     <p>O <strong>Bosque das Frutíferas</strong> é um modelo de revitalização urbana sustentável, mostrando como é possível transformar espaços degradados em áreas produtivas e benéficas para toda a população. Ele une <strong>preservação ambiental, educação e qualidade de vida</strong>, sendo uma referência para futuras iniciativas ecológicas em cidades de todo o país.</p>
     <p>🌳💚 <strong>Venha conhecer e se conectar com a natureza!</strong></p>
+    
+    <!-- Nova Seção: Estudo Técnico -->
+    <hr>
+    <h2>Estudo Técnico</h2>
+    <h3>Tempo Médio para Frutificação de Árvores Frutíferas</h3>
+    <p>A frutificação de uma árvore depende de vários fatores, como espécie, variedade, condições climáticas, qualidade do solo e métodos de cultivo. Algumas árvores começam a produzir frutos rapidamente, enquanto outras podem levar anos para atingir a maturidade produtiva.</p>
+    <h4>Classificação por Tempo de Produção</h4>
+    <p><strong>Frutificação Rápida (1 a 3 anos):</strong> Ideal para projetos de curto prazo, com retorno rápido da produção frutífera.</p>
+    <ul>
+      <li>Mamão (Carica papaya) – 6 meses a 1,5 ano</li>
+      <li>Bananeira (Musa spp.) – 12 a 18 meses</li>
+      <li>Maracujá (Passiflora edulis) – 1 a 2 anos</li>
+      <li>Figueira (Ficus carica) – 2 a 3 anos</li>
+      <li>Limoeiro (Citrus limon) – 2 a 3 anos</li>
+      <li>Pitangueira (Eugenia uniflora) – 2 a 3 anos</li>
+    </ul>
+    <p><strong>Frutificação Média (3 a 6 anos):</strong> Árvores que exigem um tempo intermediário de crescimento antes de iniciarem a produção.</p>
+    <ul>
+      <li>Laranjeira (Citrus sinensis) – 3 a 5 anos</li>
+      <li>Macieira (Malus domestica) – 3 a 5 anos</li>
+      <li>Pessegueiro (Prunus persica) – 3 a 4 anos</li>
+      <li>Goiabeira (Psidium guajava) – 3 a 4 anos</li>
+      <li>Ameixeira (Prunus domestica) – 4 a 5 anos</li>
+      <li>Pereira (Pyrus communis) – 4 a 5 anos</li>
+      <li>Jabuticabeira híbrida (Myrciaria cauliflora) – 4 a 6 anos</li>
+    </ul>
+    <p><strong>Frutificação Lenta (6 anos ou mais):</strong> Árvores que demandam um longo período de crescimento antes de darem frutos, mas com longa vida produtiva.</p>
+    <ul>
+      <li>Jabuticabeira comum (Myrciaria jaboticaba) – 8 a 15 anos</li>
+      <li>Mangueira (Mangifera indica) – 6 a 10 anos</li>
+      <li>Abacateiro (Persea americana) – 6 a 8 anos</li>
+      <li>Castanheira-do-pará (Bertholletia excelsa) – 10 a 20 anos</li>
+      <li>Nogal (Juglans regia) – 8 a 12 anos</li>
+      <li>Caquizeiro (Diospyros kaki) – 6 a 8 anos</li>
+    </ul>
+    <h3>Fatores que Influenciam a Frutificação</h3>
+    <ul>
+      <li><strong>Solo e Nutrição:</strong> O solo precisa ser bem drenado, rico em matéria orgânica e com pH adequado para cada espécie. Adubação correta, principalmente com nitrogênio (crescimento), fósforo (raízes) e potássio (floração/frutificação).</li>
+      <li><strong>Clima e Temperatura:</strong> Algumas árvores frutíferas exigem frio para induzir a frutificação (ex.: macieira e pereira), enquanto outras se adaptam melhor a climas tropicais e subtropicais (ex.: mangueira e bananeira).</li>
+      <li><strong>Poda e Manejo:</strong> A poda de formação e de frutificação ajuda a direcionar a energia para a produção de frutos. O desbaste de frutos pode melhorar a qualidade e o tamanho dos mesmos.</li>
+      <li><strong>Polinização:</strong> Algumas árvores precisam de polinizadores (abelhas, morcegos, vento) ou de variedades diferentes para frutificar (ex.: abacateiro e macieira).</li>
+    </ul>
+    <h3>Conclusão</h3>
+    <p>Para um projeto como o Bosque das Frutíferas, o ideal é combinar árvores de diferentes tempos de frutificação, garantindo produção escalonada ao longo dos anos. Isso permite um retorno sustentável e contínuo, atraindo visitantes e gerando produtos para consumo ou comercialização.</p>
+    
+    <hr>
+    <h2>Geração de Receita Direta</h2>
+    <h3>Ingresso para Visitação</h3>
+    <ul>
+      <li>Cobrança de uma taxa simbólica para entrada no bosque.</li>
+      <li>Modelos de ingressos diferenciados: diário, mensal, anual e pacotes para grupos.</li>
+    </ul>
+    <h3>Venda de Frutas e Produtos Derivados</h3>
+    <ul>
+      <li>Colheita programada para visitantes (Pague e Colha).</li>
+      <li>Venda de frutas frescas em quiosques ou mercados locais.</li>
+      <li>Produção e venda de sucos, geleias, doces e produtos artesanais.</li>
+    </ul>
+    <h3>Eventos e Experiências</h3>
+    <ul>
+      <li>Realização de feiras, festivais gastronômicos e culturais.</li>
+      <li>Casamentos, festas e piqueniques organizados.</li>
+      <li>Visitas escolares e atividades educativas pagas.</li>
+    </ul>
+    <h3>Cursos e Workshops</h3>
+    <ul>
+      <li>Aulas de jardinagem, cultivo sustentável, compostagem e agroecologia.</li>
+      <li>Programas de educação ambiental para escolas e empresas.</li>
+    </ul>
+    
+    <hr>
+    <h2>Financiamento por Parcerias e Investimentos</h2>
+    <h3>Créditos de Carbono</h3>
+    <p>O bosque pode gerar créditos de carbono pela compensação de CO₂, que podem ser vendidos para empresas que precisam reduzir sua pegada de carbono.</p>
+    <h3>Patrocínios e Naming Rights</h3>
+    <p>Empresas podem associar suas marcas ao bosque, patrocinando trilhas, áreas de lazer, bancos e espaços temáticos. Naming rights para grandes investidores (ex.: \"Bosque Natura\").</p>
+    <h3>Investimento Público e Incentivos Fiscais</h3>
+    <p>Parcerias com prefeituras e governos para expansão do projeto e captação de recursos via leis de incentivo ambiental.</p>
+    <h3>Expansão e Franquias</h3>
+    <p>Replicação do modelo do bosque em outras cidades por meio de contratos de instalação e gestão, e venda da expertise para empresas interessadas em projetos semelhantes.</p>
+    
+    <hr>
+    <h2>Sustentabilidade Financeira e Economia Circular</h2>
+    <h3>Compostagem e Venda de Adubo Orgânico</h3>
+    <p>Aproveitamento de resíduos orgânicos para produção e comercialização de adubo.</p>
+    <h3>Meliponicultura (Criação de Abelhas sem Ferrão)</h3>
+    <p>Produção e venda de mel orgânico, além da polinização natural das plantas.</p>
+    <h3>Cafeteria e Restaurante Temático</h3>
+    <p>Venda de alimentos e bebidas com ingredientes colhidos no próprio bosque.</p>
+    <h3>Artesanato e Lembranças</h3>
+    <p>Loja de souvenirs com produtos feitos a partir de materiais naturais do bosque, como chás, óleos essenciais, velas aromáticas e artesanato sustentável.</p>
+    <p>Essas estratégias tornam o <strong>Bosque das Frutíferas</strong> um investimento sustentável, gerando impacto ambiental positivo e garantindo retorno financeiro para investidores e apoiadores.</p>
   </div>
-
+  
   <footer>&copy; 2025 Bosque das Frutíferas. Todos os direitos reservados.</footer>
+  
   <script>
-  function toggleMenu() {
-    var navLinks = document.getElementById('navLinks');
-    navLinks.classList.toggle('active');
-    // Alterna entre exibir e ocultar os links
-    if (navLinks.classList.contains('active')) {
-      navLinks.style.display = 'flex';
-      navLinks.style.flexDirection = 'column';
-    } else {
-      navLinks.style.display = 'none';
+    function toggleMenu() {
+      var navLinks = document.getElementById('navLinks');
+      navLinks.classList.toggle('active');
+      // Alterna entre exibir e ocultar os links
+      if (navLinks.classList.contains('active')) {
+        navLinks.style.display = 'flex';
+        navLinks.style.flexDirection = 'column';
+      } else {
+        navLinks.style.display = 'none';
+      }
     }
-  }
-  // Exibir os links automaticamente em telas maiores
-  window.addEventListener('resize', function() {
-    if (window.innerWidth >= 600) {
-      document.getElementById('navLinks').style.display = 'flex';
-      document.getElementById('navLinks').style.flexDirection = 'row';
-    } else {
-      document.getElementById('navLinks').style.display = 'none';
-    }
-  });
-</script>
-
+    // Exibir os links automaticamente em telas maiores
+    window.addEventListener('resize', function() {
+      if (window.innerWidth >= 600) {
+        document.getElementById('navLinks').style.display = 'flex';
+        document.getElementById('navLinks').style.flexDirection = 'row';
+      } else {
+        document.getElementById('navLinks').style.display = 'none';
+      }
+    });
+  </script>
 </body>
 </html>
